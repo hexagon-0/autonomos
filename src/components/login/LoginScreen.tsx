@@ -27,7 +27,7 @@ function LoginScreen () {
         if (!canSubmit) return
 
         await pb.collection('users').authWithPassword(email, password)
-        navigation.replace('Profile')
+        navigation.replace('Home')
     }
 
     return (

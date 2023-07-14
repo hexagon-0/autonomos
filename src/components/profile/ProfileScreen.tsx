@@ -23,9 +23,14 @@ function ProfileScreen () {
     return (
         <View style={[common.container, { height: 'auto' }]}>
             <Text style={styles.nameText}>{pb.authStore.model?.name}</Text>
+            <View style={styles.statsContainer}>
+                <Text>Oportunidades: XXX</Text>
+                <Text>Candidatou-se: XXX</Text>
+                <Text>Visualizações: XXX</Text>
+            </View>
             <Pressable
                 onPress={handleLogout}
-                style={(...args) => [button.pressable(...args), { width: '90%' }]}
+                style={(...args) => [button.pressable(...args), styles.logoutButton]}
             >
                 <Text style={common.buttonText}>Sair da conta</Text>
             </Pressable>
@@ -36,8 +41,15 @@ function ProfileScreen () {
 const styles = StyleSheet.create({
     nameText: {
         fontSize: 24,
-        padding: 10,
-    }
+        margin: 24,
+    },
+    statsContainer: {
+        alignItems: "center"
+    },
+    logoutButton: {
+        width: '90%',
+        marginTop: 24,
+    },
 })
 
 export default ProfileScreen

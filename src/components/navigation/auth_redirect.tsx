@@ -11,7 +11,7 @@ export function useAuthRedirect () {
 
     useEffect(() => {
         if (userId) {
-            navigation.replace('Profile')
+            navigation.replace('Home')
         }
     }, [userId])
 }
